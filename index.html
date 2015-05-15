@@ -4,6 +4,17 @@
     <meta charset="utf-8">
     <title>Storm Security - Teste Bruno Costa Barbosa</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="flex-slider/flexslider.css" rel="stylesheet" type="text/css">
+    <script src="jquery-1.11.3.js" type="text/javascript" language="javascript"></script>
+    <script src="flex-slider/jquery.flexslider.js" type="text/javascript" language="javascript"></script>
+    <script type="text/javascript" charset="utf-8">
+	  $(window).load(function() {
+		$('.flexslider').flexslider({
+			animation: "slide"
+		});
+	  });
+    </script>  
   </head>
   
   <body>
@@ -11,19 +22,38 @@
       <header>
         <img src="images/logo_storm_security.jpg" alt="Storm Security logo">
         <h1>Storm Security</h1>
+        <nav id="menu">
+          <ul><!-- Lista colocada para retro-compatibilidade de navegadores -->
+            <li><a href="#">Conheça a Storm</a></li>
+            <li><a href="#">Portifólio</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Clipping</a></li>
+            <li><a href="#">Faça contato</a></li>
+          </ul>
+        </nav>
+        <div id="ativador_menu">
+          <i class="fa fa-bars"></i>
+        </div><!-- /div#ativador_menu -->        
       </header>
-      <nav>
-        <ul><!-- Lista colocada para retro-compatibilidade de navegadores -->
-          <li><a href="#">Conheça a Storm</a></li>
-          <li><a href="#">Portifólio</a></li>
-          <li><a href="#">Produtos</a></li>
-          <li><a href="#">Clipping</a></li>
-          <li><a href="#">Faça contato</a></li>
-        </ul>
-      </nav>
+
       <div id="banner">
-      
-      </div>
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="images/flex_slider_01.jpg" alt="Primeira imagem, com tudo." />
+            </li>
+            <li>
+              <img src="images/flex_slider_02.jpg" alt="Segunda imagem, só a foto do filme."/>
+            </li>
+            <li>
+              <img src="images/flex_slider_03.jpg" alt="Terceira imagem, foto com a legenda."/>
+            </li>
+            <li>
+              <img src="images/flex_slider_04.jpg" alt="Quarta imagem, só os dispositivos." />
+            </li>
+          </ul>
+        </div>
+      </div><!-- /div#banner -->
       <section id="content_01">
         <article>
           <h2>Pequenas Empresas Grandes Negócios</h2>
@@ -41,11 +71,11 @@
           <p><a href="#">Próximo</a></p>
           <p><a href="#">Anterior</a></p>
           <nav>
-          <ul>
-            <li><a href="#">O Globo Blogs - Inovação</a></li>
-            <li><a href="#">Pequenas Empresas Grandes Negócios</a></li>
-            <li><a href="#">Revista Galileu</a></li>
-          </ul>
+            <ul><!-- Lista colocada para retro-compatibilidade de navegadores -->
+              <li><a href="#">O Globo Blogs - Inovação</a></li>
+              <li><a href="#">Pequenas Empresas Grandes Negócios</a></li>
+              <li><a href="#">Revista Galileu</a></li>
+            </ul>
           </nav>
         </aside>
       </section><!-- /section#content_01 -->
@@ -61,13 +91,13 @@
           <textarea name="mensagem" placeholder="sua mensagem" id="campo_mensagem"></textarea>
           <input type="submit" name="enviar" value="ENVIAR" id="campo_enviar"> 
         </form>
-        <address>
+        <address id="rio_de_janeiro">
           <p>Rio de Janeiro<br>
             Av. Lúcio Costa 3400 - Sl 304. Barra da Tijuca<br>
             Rio de Janeiro / RJ - CEP 22630-010<br>
           Office: +55 (21) 3734-0695</p>
         </address>
-        <address>
+        <address id="new_york">
           <p>New York<br>
             136 Madison Avenue - New York, NY 10016<br>
           Office: +1 (646) 722 3838</p>

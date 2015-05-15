@@ -7,7 +7,9 @@
 }
 a {text-decoration: none;}
 li {list-style-type: none;}
-body {background-color: #CFC}
+body {
+	background: url(images/fundo_01.jpg);
+}
 section, footer {clear: both;}
 div#main {
 	box-sizing: border-box;	
@@ -21,6 +23,9 @@ header {
 	width: 100%; 
 	height: 56px; 
 	background: url(images/bg_header.jpg) repeat-x;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 header h1 {
 	width: 0px; 
@@ -32,6 +37,7 @@ header img {
 	max-width: 225px;
 	height: auto;
 	float: left;
+	margin-left: 5px
 }
 header nav#menu{
 	width: 0px;
@@ -42,14 +48,13 @@ header nav#menu{
 header div#ativador_menu {
 	color: #FFF;
 	float: right;
+	width: 56px;
 	height: 56px;
 	background-color: #F30;
 }
 header div#ativador_menu i{
-	display: block;
 	transform: scale(2,2);
 	background-color: #C9C;
-	clear: both;
 }
 section#content_01 article figure img {
 	width: 100%;
