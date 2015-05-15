@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+/*MOBILE FIRST*/
+* {
+	margin: 0px;
+	padding: 0px;
+}
+a {text-decoration: none;}
+li {list-style-type: none;}
+body {background-color: #CFC}
+@media screen and (min-width: 321px) {
+	body {background-color: #CCF;}
+}
