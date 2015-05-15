@@ -8,6 +8,89 @@
 a {text-decoration: none;}
 li {list-style-type: none;}
 body {background-color: #CFC}
+section, footer {clear: both;}
+div#main {
+	box-sizing: border-box;	
+	width: 320px; /*box-model-w: 320px;*/ 
+	padding: 10px; margin: 0px auto; 
+	background-color: #161616; 
+	color: #FFF;
+	overflow: hidden;
+}
+header {
+	width: 100%; 
+	height: 56px; 
+	background: url(images/bg_header.jpg) repeat-x;
+}
+header h1 {
+	width: 0px; 
+	height: 0px; 
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+	max-width: 225px;
+	height: auto;
+	float: left;
+}
+header nav#menu{
+	width: 0px;
+	height: 0px; 
+	overflow: hidden;
+	float: right;
+}
+header div#ativador_menu {
+	color: #FFF;
+	float: right;
+	height: 56px;
+	background-color: #F30;
+}
+header div#ativador_menu i{
+	display: block;
+	transform: scale(2,2);
+	background-color: #C9C;
+	clear: both;
+}
+section#content_01 article figure img {
+	width: 100%;
+	height: auto;
+}
 @media screen and (min-width: 321px) {
 	body {background-color: #CCF;}
+	div#main {
+		width: 100%;/*contradiz width acima*/
+		max-width: 1000px;
+	}
+	header img {
+		max-width: 270px;/*contradiz width acima*/
+		height: auto;
+	}
+
+}
+@media screen and (min-width: 851px) {
+	header nav#menu {/*Aparece o menu horizontal*/
+		width: auto;/*contradiz width acima*/
+		height: auto;/*contradiz height acima*/
+		overflow: visible;/*contradiz overflow acima*/
+	}
+	header nav#menu ul li {
+		float: left;
+	}
+	header nav#menu ul li a {
+		display: block;
+		width: 115px;
+		text-align: center;
+		height: 56px;
+		line-height: 56px;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: .8em;
+		text-transform: uppercase;
+		color: #FFF;
+		border-left: solid 1px #FFF;
+	}	
+	header div#ativador_menu {/*Some com o botão ativador do menu.*/
+		width: 0px; 
+		height: 0px; 
+		overflow: hidden;
+	}
 }
