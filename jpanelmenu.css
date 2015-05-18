@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+/*CSS Exclusivo do JPanelMenu: Serve somente para o novo menu criado!*/
+div.JPanelMenu-panel {}
+nav#jPanelMenu-menu {
+	background-color: #000;
+	background-image: none;
+	overflow: auto;
+}
+div.JPanelMenu-panel {}
+nav#jPanelMenu-menu ul li a {
+	color: #FFF;
+}

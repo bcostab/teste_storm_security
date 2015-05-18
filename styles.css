@@ -7,17 +7,18 @@
 }
 a {text-decoration: none;}
 li {list-style-type: none;}
-body {
-	background: url(images/fundo_01.jpg);
-}
+body {background: url(images/fundo_01.jpg);}
 section, footer {clear: both;}
 div#main {
-	box-sizing: border-box;	
-	width: 320px; /*box-model-w: 320px;*/ 
-	padding: 10px; margin: 0px auto; 
-	background-color: #161616; 
+	box-sizing: border-box;
+	width: 320px; /*box-model-w: 320px;*/
+	/* [disabled]padding: 10px; */
+	margin: 0px auto;
+	background-color: #161616;
 	color: #FFF;
 	overflow: hidden;
+	position: relative;/*Descendente header é fixed*/
+	z-index: 1;
 }
 header {
 	width: 100%; 
@@ -26,6 +27,8 @@ header {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	position: fixed;
+	z-index:2;
 }
 header h1 {
 	width: 0px; 
@@ -36,6 +39,7 @@ header img {
 	width: 100%;
 	max-width: 225px;
 	height: auto;
+	display: block;
 	float: left;
 	margin-left: 5px
 }
@@ -51,14 +55,19 @@ header div#ativador_menu {
 	width: 56px;
 	height: 56px;
 	background-color: #F30;
+	line-height: 56px;/*Centraliza vertical*/
+	text-align: center;
 }
-header div#ativador_menu i{
+header div#ativador_menu a i{/*Não pode mudar para block, se não bagunça o font-awesome*/
 	transform: scale(2,2);
 	background-color: #C9C;
+	float: none;
+	clear: both;
 }
-section#content_01 article figure img {
+article figure img {
 	width: 100%;
 	height: auto;
+	max-width: 457px;
 }
 @media screen and (min-width: 321px) {
 	body {background-color: #CCF;}
@@ -66,6 +75,9 @@ section#content_01 article figure img {
 		width: 100%;/*contradiz width acima*/
 		max-width: 1000px;
 	}
+	header {
+		max-width: 1000px;/*contradiz max-width acima*/
+	}	
 	header img {
 		max-width: 270px;/*contradiz width acima*/
 		height: auto;
@@ -73,6 +85,7 @@ section#content_01 article figure img {
 
 }
 @media screen and (min-width: 851px) {
+
 	header nav#menu {/*Aparece o menu horizontal*/
 		width: auto;/*contradiz width acima*/
 		height: auto;/*contradiz height acima*/
@@ -98,4 +111,26 @@ section#content_01 article figure img {
 		height: 0px; 
 		overflow: hidden;
 	}
+	article {
+		width: 460px;/*box-model-width: 500px;*/
+		padding: 20px;
+		float: left;
+	}
+	aside {
+		floar: right;
+	}
+	footer > p{
+		color: red;
+	}
+}
+
+@charset "utf-8";
+/* CSS Document */
+/*CSS Exclusivo do JPanelMenu: Serve somente para o novo menu criado!*/
+div.JPanelMenu-panel nav#jPanelMenu-menu {
+	background-color: #000;
+	background-image: none;
+}
+div.JPanelMenu-panel nav#jPanelMenu-menu ul li a {
+	color: #FFF;
 }
