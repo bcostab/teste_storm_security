@@ -117,20 +117,67 @@ article figure img {
 		float: left;
 	}
 	aside {
-		floar: right;
+		float: right;
+	}
+	aside nav#menu-sociais {
+	border: solid 1px #1472b3;
+	width: 84px;/*box-model-width: 86px*/
+	height: 240px;/*box-model-height: 242px*/
+	/* [disabled]opacity: .41; */
+	}
+	aside nav#menu-sociais ul {
+		background-color: #21405b;
+		height: 240px;/*Para que a cor de fundo chegue até o final*/
+	}
+	aside nav#menu-sociais ul li {
+		text-align: center;
+		height: 60px; /* 1/4 de 240px*/
+		overflow: hidden;
+		opacity: 1;
+	}
+	aside nav#menu-sociais ul li a {
+		display: block;
+		overflow: hidden;
+		background: no-repeat;
+		margin: 0px auto;
+	}
+	aside nav#menu-sociais ul li a[title="Curtir no Facebook"]{
+		background-image: url(images/like.png);
+		width: 55px;
+		height: 20px;
+		position: relative;/*centraliza verticalmente.*/
+		top: 20px;
+	}
+	aside nav#menu-sociais ul li a[title="Retuitar"]{
+		background-image: url(images/tweet.png);
+		width: 55px;
+		height: 20px;
+	}
+	aside nav#menu-sociais ul li a[title="Próxima notícia"]{
+		background: url(images/seta_peq_dir.png) center center no-repeat;
+		background-color: #1979bc;
+		width: 37px;
+		height: 37px;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+	}	
+	aside nav#menu-sociais ul li a[title="Notícia anterior"]{
+		background: url(images/seta_peq_esq.png) center center no-repeat;
+		background-color: #1979bc;
+		width: 37px;
+		height: 37px;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+	}	
+	aside nav#menu-sociais ul li a span.auxiliar {/*Técnica image replacement: some com o texto.*/
+		display: block; /*Span por default é inline.*/
+		width: 0px;
+		height: 0px;
+		overflow: hidden;
 	}
 	footer > p{
 		color: red;
 	}
-}
-
-@charset "utf-8";
-/* CSS Document */
-/*CSS Exclusivo do JPanelMenu: Serve somente para o novo menu criado!*/
-div.JPanelMenu-panel nav#jPanelMenu-menu {
-	background-color: #000;
-	background-image: none;
-}
-div.JPanelMenu-panel nav#jPanelMenu-menu ul li a {
-	color: #FFF;
 }
