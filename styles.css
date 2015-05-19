@@ -111,29 +111,44 @@ article figure img {
 		height: 0px; 
 		overflow: hidden;
 	}
+	section#content_01 {
+		background-color: rgba(255,153,0,.1);
+		overflow: auto;
+	}
 	article {
 		width: 460px;/*box-model-width: 500px;*/
 		padding: 20px;
 		float: left;
+		background-color: rgba(204,255,0,.1);
 	}
 	aside {
 		float: right;
+		background-color: rgba(255,0,0,.3);
+		width: calc(100% - 500px);
+	}
+	aside nav {
+		display: inline-block;
+		vertical-align: top;		
 	}
 	aside nav#menu-sociais {
-	border: solid 1px #1472b3;
-	width: 84px;/*box-model-width: 86px*/
-	height: 240px;/*box-model-height: 242px*/
-	/* [disabled]opacity: .41; */
+	  border: solid 1px #1472b3;
+	  width: 84px;/*box-model-width: 86px*/
+	  height: 240px;/*box-model-height: 242px*/
+	  /* [disabled]opacity: .41; */
 	}
 	aside nav#menu-sociais ul {
 		background-color: #21405b;
-		height: 240px;/*Para que a cor de fundo chegue até o final*/
+		height: 210px;/* Para que a cor de fundo chegue até o final. Box-model-height: 240px*/
+		padding: 15px;
 	}
 	aside nav#menu-sociais ul li {
-		text-align: center;
-		height: 60px; /* 1/4 de 240px*/
-		overflow: hidden;
-		opacity: 1;
+	text-align: center;
+	/* [disabled]height: 60px; */ /* 1/4 de 240px*/
+	/* [disabled]overflow: hidden; */
+	/* [disabled]opacity: 1; */
+	}
+	aside nav#menu-sociais ul li:nth-child(1), aside nav#menu-sociais ul li:nth-child(2){
+		height: 30px;
 	}
 	aside nav#menu-sociais ul li a {
 		display: block;
@@ -142,17 +157,46 @@ article figure img {
 		margin: 0px auto;
 	}
 	aside nav#menu-sociais ul li a[title="Curtir no Facebook"]{
-		background-image: url(images/like.png);
-		width: 55px;
-		height: 20px;
-		position: relative;/*centraliza verticalmente.*/
-		top: 20px;
+	  background-image: url(images/like.png);
+	  width: 55px;
+	  height: 20px;
 	}
 	aside nav#menu-sociais ul li a[title="Retuitar"]{
 		background-image: url(images/tweet.png);
 		width: 55px;
 		height: 20px;
 	}
+	aside nav#menu-sociais ul li a[title="Próxima notícia"], aside nav#menu-sociais ul li a[title="Notícia anterior"] {
+		height: 57px;/* Box-model-height: 75px*/
+		padding-top: 18px;
+	}	
+	aside nav#menu-sociais ul li a span.auxiliar {/*Técnica image replacement: some com o texto.*/
+		display: block; /*Span por default é inline.*/
+		width: 0px;
+		height: 0px;
+		overflow: hidden;
+	}	
+	aside nav#menu-sociais ul li a span.auxiliar.visual {
+		display: block;
+		background: center center no-repeat;
+		background-color: #1979bc;
+		width: 37px;
+		height: 37px;
+		margin: 0px auto;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+	}
+	aside nav#menu-sociais ul li a[title="Próxima notícia"]	span.auxiliar.visual {
+		background-image: url(images/seta_peq_dir.png);
+	}
+	aside nav#menu-sociais ul li a[title="Notícia anterior"] span.auxiliar.visual {
+		background-image: url(images/seta_peq_esq.png);
+	}
+	aside nav#menu-sociais ul li a span.auxiliar.visual	+ span {
+		color: #FFF;
+	}
+	/*
 	aside nav#menu-sociais ul li a[title="Próxima notícia"]{
 		background: url(images/seta_peq_dir.png) center center no-repeat;
 		background-color: #1979bc;
@@ -170,13 +214,9 @@ article figure img {
 		-moz-border-radius: 50%;
 		-webkit-border-radius: 50%;
 		border-radius: 50%;
-	}	
-	aside nav#menu-sociais ul li a span.auxiliar {/*Técnica image replacement: some com o texto.*/
-		display: block; /*Span por default é inline.*/
-		width: 0px;
-		height: 0px;
-		overflow: hidden;
 	}
+	*/	
+
 	footer > p{
 		color: red;
 	}
