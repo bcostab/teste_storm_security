@@ -216,8 +216,49 @@ article figure img {
 		border-radius: 50%;
 	}
 	*/	
-
 	footer > p{
 		color: red;
+	}
+	form#formulario {
+		display: inline-block;		
+		width: 455px; /*Box-model-width: 475px;*/
+		height: 265px;/*Box-model-width: 475px;*/
+		padding: 10px;
+		overflow: hidden;
+		background: url(images/fundo_formulario.jpg) right top no-repeat #FC0;		
+	}
+	form#formulario label, form#formulario input, form#formulario textarea {
+		display: inline-block;
+	}
+	form#formulario input[type="text"] {
+		width: 325px;
+		height: 35px;
+		overflow: hidden;
+		margin-bottom: 10px;
+		vertical-align: top;
+	}
+	form#formulario label {
+		width: 75px;
+		height: 35px;
+		overflow: hidden;
+		background: #0CC;
+		vertical-align: top;
+		margin-left: 35px;		
+	}
+	form#formulario label[for="campo_mensagem"] {
+		width: 0px;
+		height: 0px;
+		overflow: hidden;
+	}
+	form#formulario textarea {
+		width: 400px;
+		height: 120px;
+		margin-bottom: 10px;
+	}
+	form#formulario input[type="submit"] {
+		display: block;
+		margin: 0px 15px 0px auto;
+		background: #1979bc;
+		border: none 0px transparent;
 	}
 }
