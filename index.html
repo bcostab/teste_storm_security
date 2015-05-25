@@ -18,7 +18,7 @@
 		});
 	  });
     </script>  
-	<script language="javascript" type="text/javascript" charset="utf-8">
+	<!--<script language="javascript" type="text/javascript" charset="utf-8">
 	  $(document).ready(function () {
 		  var jPM = $.jPanelMenu({
 			  /*Personalização: caso você queira que os ID e a class utilizados tenham nomes diferentes.*/
@@ -27,7 +27,7 @@
 			  });
 		  jPM.on();
 	  });
-	</script>
+	</script>-->
 
   </head>
   
@@ -104,17 +104,19 @@
           <textarea name="mensagem" placeholder="sua mensagem" id="campo_mensagem"></textarea>
           <input type="submit" name="enviar" value="ENVIAR" id="campo_enviar"> 
         </form>
-        <address id="rio_de_janeiro">
-          <p>Rio de Janeiro<br>
-            Av. Lúcio Costa 3400 - Sl 304. Barra da Tijuca<br>
-            Rio de Janeiro / RJ - CEP 22630-010<br>
-          Office: +55 (21) 3734-0695</p>
-        </address>
-        <address id="new_york">
-          <p>New York<br>
-            136 Madison Avenue - New York, NY 10016<br>
-          Office: +1 (646) 722 3838</p>
+        <section id="enderecos">
+          <address id="rio_de_janeiro">
+            <h3>Rio de Janeiro</h3>
+              <p>Av. Lúcio Costa 3400 - Sl 304. Barra da Tijuca<br>
+              Rio de Janeiro / RJ - CEP 22630-010<br>
+            Office: +55 (21) 3734-0695</p>
           </address>
+          <address id="new_york">
+            <h3>New York</h3>
+             <p> 136 Madison Avenue - New York, NY 10016<br>
+            Office: +1 (646) 722 3838</p>
+            </address>
+          </section><!-- /section#enderecos -->
       </footer>
     </div><!-- /div#main -->
   </body>

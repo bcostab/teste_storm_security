@@ -20,14 +20,14 @@ div#main {
 	position: relative;/*Descendente header é fixed*/
 	z-index: 1;
 }
-header {
+div#main header {
 	width: 100%; 
 	height: 56px; 
 	background: url(images/bg_header.jpg) repeat-x;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	position: fixed;
+	position: fixed;/*DESATIVAR JPANEL MENU. Caso contrário o fixed não funciona.*/
 	z-index:2;
 }
 header h1 {
@@ -68,6 +68,11 @@ article figure img {
 	width: 100%;
 	height: auto;
 	max-width: 457px;
+}
+article figure figcaption {/*Não tem figcaption nesta query.*/
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
 }
 @media screen and (min-width: 321px) {
 	body {background-color: #CCF;}
@@ -120,6 +125,27 @@ article figure img {
 		padding: 20px;
 		float: left;
 		background-color: rgba(204,255,0,.1);
+	}
+	article h2 {
+		font-size: 17px;
+		text-transform: uppercase;
+		margin-bottom: 16px;
+	}
+	article p {
+		font-size: 15px;
+		margin-bottom: 28px;
+	}
+	article h2 + p {
+		margin-bottom: 16px;
+	}
+	article figure figcaption {
+		width: 100%;/*Contradiz primeira media query, acima.*/
+		height: auto;/*Contradiz primeira media query, acima.*/
+		overflow: visible;/*Contradiz primeira media query, acima.*/
+		font-size: 10px;
+	}
+	article figure + p {
+		margin-top: 28px;
 	}
 	aside {
 		float: right;
@@ -215,17 +241,39 @@ article figure img {
 		-webkit-border-radius: 50%;
 		border-radius: 50%;
 	}
-	*/	
+	*/
+	aside nav#menu-noticias ul li a {
+		color: #FFF;
+		font-weight: bold;
+		font-size: 13px;
+		text-transform: uppercase;
+	}
+	aside nav#menu-noticias ul li a:hover, aside nav#menu-noticias ul li a:active {
+		color: #FF0;
+	}
+	footer {
+		font-family: "Adobe Garamond Pro", Verdana, Arial;
+	}
 	footer > p{
-		color: red;
+		width: 660px;
+		margin: 0px auto;
+		font-size: 22px;
+		color: #FFF;
+		text-align: center;
+		margin-bottom: 66px;
 	}
 	form#formulario {
 		display: inline-block;		
 		width: 455px; /*Box-model-width: 475px;*/
-		height: 265px;/*Box-model-width: 475px;*/
+		height: 285px;/*Box-model-height: 305px;*/
 		padding: 10px;
 		overflow: hidden;
 		background: url(images/fundo_formulario.jpg) right top no-repeat #FC0;		
+	}
+	form#formulario h2 {
+		/*font-family: "Adobe Garamond Pro", Verdana, Arial;*/
+		font-size: 17px;
+		color: #FFF;
 	}
 	form#formulario label, form#formulario input, form#formulario textarea {
 		display: inline-block;
@@ -236,14 +284,19 @@ article figure img {
 		overflow: hidden;
 		margin-bottom: 10px;
 		vertical-align: top;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;		
 	}
 	form#formulario label {
 		width: 75px;
-		height: 35px;
+		height: 39px;
+		line-height: 35px;
 		overflow: hidden;
 		background: #0CC;
 		vertical-align: top;
-		margin-left: 35px;		
+		margin-left: 35px;
+		border: none 0px transparent;		
 	}
 	form#formulario label[for="campo_mensagem"] {
 		width: 0px;
@@ -254,11 +307,41 @@ article figure img {
 		width: 400px;
 		height: 120px;
 		margin-bottom: 10px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;			
 	}
 	form#formulario input[type="submit"] {
 		display: block;
+		width: 74px;
+		height: 28px;
+		line-height: 32px;/*Distorção do uso do line-height para centralizar verticalmente.*/
+		overflow: hidden;
+		/*font-family: "Adobe Garamond Pro", Verdana, Arial;*/
+		font-size: 13px;
+		color: #FFF;
+		font-weight: bold;
 		margin: 0px 15px 0px auto;
 		background: #1979bc;
 		border: none 0px transparent;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
 	}
+	section#enderecos {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 50px;
+	}
+	section#enderecos address {
+		margin-bottom: 40px;
+		font-style: normal;
+		font-size: 16px;
+	}
+	section#enderecos address h3 {
+		font-size: 18px;
+	}
+	section#enderecos address p {
+		font-size: 16px;
+	}	
 }
